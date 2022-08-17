@@ -1,0 +1,230 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{ed7ff20f-67e2-4ed2-b36c-78be415ef506}</ProjectGuid>
+			<MainSource>Analitic.dpr</MainSource>
+			<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<DCC_DependencyCheckOutputName>Analitic.exe</DCC_DependencyCheckOutputName>
+			<FrameworkType>VCL</FrameworkType>
+			<ProjectVersion>13.4</ProjectVersion>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform Condition="'$(Platform)'==''">Win32</Platform>
+			<TargetedPlatforms>1</TargetedPlatforms>
+			<AppType>Application</AppType>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+			<Base_Win64>true</Base_Win64>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+			<Base_Win32>true</Base_Win32>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+			<Cfg_2_Win32>true</Cfg_2_Win32>
+			<CfgParent>Cfg_2</CfgParent>
+			<Cfg_2>true</Cfg_2>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<VerInfo_MinorVer>24</VerInfo_MinorVer>
+			<DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;Data.Win;System.Win;$(DCC_Namespace)</DCC_Namespace>
+			<VerInfo_Locale>1049</VerInfo_Locale>
+			<VerInfo_Keys>CompanyName=Вертинский Геннадий Эдуардович;FileDescription=Система &quot;АНАЛИТИКА&quot;;FileVersion=1.24.0.0;InternalName=;LegalCopyright=2009-2011 (С);LegalTrademarks=Вертинский Геннадий Эдуардович;OriginalFilename=Analitic;ProductName=Система &quot;АНАЛИТИКА&quot;;ProductVersion=1.24;Comments=Система анализа преступности и деятельности правоохранительных органов</VerInfo_Keys>
+			<VerInfo_AutoGenVersion>true</VerInfo_AutoGenVersion>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win64)'!=''">
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<DCC_Namespace>Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+			<Icon_MainIcon>Analitic_Icon.ico</Icon_MainIcon>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base_Win32)'!=''">
+			<VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+			<Icon_MainIcon>Analitic_Icon.ico</Icon_MainIcon>
+			<DCC_Namespace>Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+			<VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<Debugger_DebugSourcePath>D:\Вертинский\Статистика\ADMIN\MATRIX\;X:\Аналитика\SERV\;$(Debugger_DebugSourcePath)</Debugger_DebugSourcePath>
+			<Manifest_File>$(BDS)\bin\default_app.manifest</Manifest_File>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<Version>7.0</Version>
+			<DCC_DebugInformation>False</DCC_DebugInformation>
+			<DCC_LocalDebugSymbols>False</DCC_LocalDebugSymbols>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<Version>7.0</Version>
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+			<VerInfo_AutoGenVersion>false</VerInfo_AutoGenVersion>
+			<VerInfo_Locale>1033</VerInfo_Locale>
+			<VerInfo_MajorVer>2</VerInfo_MajorVer>
+			<VerInfo_MinorVer>7</VerInfo_MinorVer>
+			<VerInfo_Keys>CompanyName=Следственный комитет / Генеральная прокуратура Республики Беларусь;FileDescription=Система анализа борьбы с преступностью и деятельности правоохранительных органов;FileVersion=2.7.0.0;InternalName=&quot;Аналитика&quot;;LegalCopyright=Вертинский Геннадий Эдуардович;LegalTrademarks=&quot;Аналитика&quot;;OriginalFilename=Analitic.exe;ProductName=&quot;Аналитика&quot;;ProductVersion=2.7.0.0;Comments=+375-44-7555961</VerInfo_Keys>
+		</PropertyGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Parameters>
+						<Parameters Name="DebugSourceDirs">D:\Вертинский\Статистика\ADMIN\MATRIX\;X:\Аналитика\SERV\</Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">True</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">24</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1049</VersionInfo>
+						<VersionInfo Name="CodePage">1251</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">Вертинский Геннадий Эдуардович</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription">Система &quot;АНАЛИТИКА&quot;</VersionInfoKeys>
+						<VersionInfoKeys Name="FileVersion">1.24.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright">2009-2011 (С)</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalTrademarks">Вертинский Геннадий Эдуардович</VersionInfoKeys>
+						<VersionInfoKeys Name="OriginalFilename">Analitic</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductName">Система &quot;АНАЛИТИКА&quot;</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.24</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments">Система анализа преступности и деятельности правоохранительных органов</VersionInfoKeys>
+					</VersionInfoKeys>
+					<Source>
+						<Source Name="MainSource">Analitic.dpr</Source>
+					</Source>
+					<Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcboffice2k160.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\bcbofficexp160.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+						<Excluded_Packages Name="$(BDSBIN)\dcloffice2k160.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+				<ModelSupport>False</ModelSupport>
+				<Platforms>
+					<Platform value="Win64">False</Platform>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<ItemGroup>
+			<DelphiCompile Include="$(MainSource)">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="MAIN.pas">
+				<Form>FMAIN</Form>
+			</DCCReference>
+			<DCCReference Include="Fun\FunBD.pas"/>
+			<DCCReference Include="Fun\FunText.pas"/>
+			<DCCReference Include="Fun\FunType.pas"/>
+			<DCCReference Include="Fun\FunIO.pas"/>
+			<DCCReference Include="Fun\FunIni.pas"/>
+			<DCCReference Include="Fun\FunConst.pas"/>
+			<DCCReference Include="Fun\FunVerify.pas"/>
+			<DCCReference Include="Fun\FunSum.pas"/>
+			<DCCReference Include="Fun\COMMON\FunVcl.pas"/>
+			<DCCReference Include="Fun\COMMON\FunInfo.pas"/>
+			<DCCReference Include="Fun\COMMON\FunFiles.pas"/>
+			<DCCReference Include="Fun\COMMON\FunDay.pas"/>
+			<DCCReference Include="Fun\FunSys.pas"/>
+			<DCCReference Include="Fun\COMMON\FunExcel.pas"/>
+			<DCCReference Include="Fun\COMMON\FunTree.pas"/>
+			<DCCReference Include="SERV\MSPLASH.pas">
+				<Form>FSPLASH</Form>
+			</DCCReference>
+			<DCCReference Include="SERV\MTITLE.pas">
+				<Form>FTITLE</Form>
+			</DCCReference>
+			<DCCReference Include="SERV\MEXPORT.pas">
+				<Form>FEXPORT</Form>
+			</DCCReference>
+			<DCCReference Include="SERV\MIMPORT_XLS.pas"/>
+			<DCCReference Include="SERV\MIMPORT_RAR.pas">
+				<Form>FIMPORT_RAR</Form>
+			</DCCReference>
+			<DCCReference Include="SERV\MBASE.pas"/>
+			<DCCReference Include="SERV\MSET.pas">
+				<Form>FSET</Form>
+			</DCCReference>
+			<DCCReference Include="SERV\MREPORT.pas"/>
+			<DCCReference Include="SERV\MBLANK.pas">
+				<Form>FBLANK</Form>
+			</DCCReference>
+			<DCCReference Include="SERV\MPARAM.pas">
+				<Form>FPARAM</Form>
+			</DCCReference>
+			<DCCReference Include="SERV\MINFO.pas">
+				<Form>FINFO</Form>
+			</DCCReference>
+			<DCCReference Include="SERV\MBDREGION.pas">
+				<Form>FBDREGION</Form>
+			</DCCReference>
+			<DCCReference Include="SERV\MBANK.pas">
+				<Form>FBANK</Form>
+				<FormType>dfm</FormType>
+			</DCCReference>
+			<DCCReference Include="SERV\KOD\MKOD.pas">
+				<Form>FKOD</Form>
+			</DCCReference>
+			<DCCReference Include="SERV\KOD\MKOD_FORMULA.pas">
+				<Form>FKOD_FORMULA</Form>
+			</DCCReference>
+			<DCCReference Include="SERV\KOD\MKOD_CORRECT.pas">
+				<Form>FKOD_CORRECT</Form>
+			</DCCReference>
+			<DCCReference Include="SERV\MATRIX\MMATRIX.pas">
+				<Form>FMATRIX</Form>
+			</DCCReference>
+			<DCCReference Include="SERV\MABOUT.pas">
+				<Form>FABOUT</Form>
+			</DCCReference>
+			<DCCReference Include="SERV\MCLOSE.pas">
+				<Form>FCLOSE</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+	</Project>
